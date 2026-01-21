@@ -1,0 +1,20 @@
+
+Happy path – direct search
+
+Step 1: Open homepage 
+Step 2: Search for hurma using header → land on /arama?q=hurma
+Validate: 200 OK, URL contains /arama?q=hurma, body contains hurma, and result listing region loads.
+
+
+
+Repeat search with a different term
+
+Query: seramik yapıştırıcı (UTF‑8, whitespace).
+Validate as above and ensure the term appears in the response.
+(Demonstrates encoding + multi‑word queries.) 
+
+
+
+Edge case – empty or special characters
+
+Queries: "", "@#% iphone" → Expect graceful handling (redirect, error message, or empty results) without 5xx.
